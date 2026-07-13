@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #f8fafc;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 32px;
+}
+
+.setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+select, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #e2e8f0;
+  font-size: 1rem;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+button {
+  padding: 14px 24px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+button:disabled {
+  background: #475569;
+  cursor: not-allowed;
+}
+
+.progress {
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.topic-badge {
+  display: inline-block;
+  background: #1e3a5f;
+  color: #60a5fa;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.question {
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.overall-score {
+  text-align: center;
+  margin: 24px 0;
+  padding: 24px;
+  background: #1e293b;
+  border-radius: 12px;
+}
+
+.score-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.evaluation-card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.evaluation-card h3 {
+  color: #f8fafc;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.your-answer {
+  color: #94a3b8;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.scores {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.scores span {
+  background: #0f172a;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #60a5fa;
+}
+
+.feedback p {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}

@@ -25,7 +25,7 @@ function App() {
 
     const fetchHistory = async () => {
       try {
-        const res = await fetch('http://localhost:8080/api/interview/history');
+        const res = await fetch(`${API_BASE_URL}/api/interview/history`);
         const data = await res.json();
         setHistory(data);
       } catch (err) {
@@ -39,7 +39,7 @@ function App() {
     setLoading(true);
     try {
 
-      const res = await fetch('${API_BASE_URL}/api/interview/start', {
+      const res = await fetch(`${API_BASE_URL}/api/interview/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ role, difficulty })
@@ -59,7 +59,7 @@ function App() {
     if (!answer.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch('${API_BASE_URL}/api/interview/evaluate', {
+      const res = await fetch(`${API_BASE_URL}/api/interview/evaluate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -86,7 +86,7 @@ function App() {
                  answer: answer,
                  ...evaluation
                }];
-               await fetch('http://localhost:8080/api/interview/save', {
+               await fetch(`${API_BASE_URL}/api/interview/save`, {
                  method: 'POST',
                  headers: { 'Content-Type': 'application/json' },
                  body: JSON.stringify({

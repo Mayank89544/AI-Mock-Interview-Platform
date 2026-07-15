@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+    // Use the Render URL if deployed, otherwise fallback to localhost for development
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+
   // Track which view is active: setup, session, or report
   const [view, setView] = useState('setup');
   const [role, setRole] = useState('');
@@ -35,7 +38,8 @@ function App() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8080/api/interview/start', {
+
+      const res = await fetch('${API_BASE_URL}/api/interview/start', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ role, difficulty })
@@ -55,7 +59,7 @@ function App() {
     if (!answer.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8080/api/interview/evaluate', {
+      const res = await fetch('${API_BASE_URL}/api/interview/evaluate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

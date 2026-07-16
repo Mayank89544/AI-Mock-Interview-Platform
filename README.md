@@ -120,7 +120,7 @@ This project is deployed on Render with the frontend and backend as two independ
 ## 👤 Author
 
 **Mayank Chandel**
-[LinkedIn](https://linkedin.com/in/mayank-chandel) • [GitHub](https://github.com/Mayank89544) • [LeetCode](https://leetcode.com/mayank_0001)
+[LinkedIn](https://www.linkedin.com/in/mayank-chandel-42575b299/) • [GitHub](https://github.com/Mayank89544) • [LeetCode](https://leetcode.com/mayank_0001)
 
 ## 📄 License
 
